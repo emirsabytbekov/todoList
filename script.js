@@ -7,3 +7,27 @@ const todoCount = document.getElementById("todoCount");
 const todoButton = document.querySelector(".btn");
 const deleteButton = document.getElementById("deleteButton");
 
+// Initialize
+document.addEventListener("DOMContentLoaded", function () {
+    addButton.addEventListener('click', addTask());
+    todoInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            addTask();
+        }
+    });
+    deleteButton.addEventListener('click', deleteAllTasks());
+    displayTasks();
+});
+
+function addTask () {
+
+}
+
+function deleteAllTasks () {
+    
+}
+
+function displayTasks () {
+    
+}
