@@ -47,11 +47,12 @@ function displayTasks () {
             <p id="todo-${index}" class="${item.disabled ? "disabled" : ""}" onclick="editTask(${index})">${item.text}</p>
             </div>
         `;
-        p.querySelector(".todo-checkbox").addEventListener("change", () => {
-            toggleTask(index);
-        });
+        p.querySelector(".todo-checkbox").addEventListener("change", () =>
+            toggleTask(index)
+        );
         todoList.appendChild(p);
-    }); 
+    });
+    todoCount.textContent = todo.length;
 }
 
 function editTask(index) {
